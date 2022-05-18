@@ -16,6 +16,11 @@
             src: url("fonts/BELL.TTF");
         }
     </style>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 
@@ -37,9 +42,6 @@
                     <li><a href="#section1">Home</a></li>
                     <li><a href="#section2">Section 2</a></li>
                     <li><a href="#section3">Section 3</a></li>
-                    <li><a href="#section4">Section 4</a></li>
-                    <li><a href="#section5">Section 5</a></li>
-                    <li><a href="#section6">Section 6</a></li>
                 </ul>
             </div>
         </div>
@@ -70,6 +72,10 @@
     <div class="content">
         <div class="separator"></div>
         <h1>Section 2</h1>
+        <p>Content:blablablablablablabla</p>
+        <button id="play">Play</button>
+        <div id="map_plot" class="center svg_container">
+        </div>
     </div>
 </div>
 
@@ -77,33 +83,21 @@
     <div class="content">
         <div class="separator"></div>
         <h1>Section 3</h1>
+        <p>Content:blablablablablablabla</p>
+        <div id="bar_plot" class="center svg_container">
+            <button onclick="update(key='abundance_mean')">Mean Abundance</button>
+            <button onclick="update(key='total_pop_percent')">Total Population</button>
+            <button onclick="update(key='range_percent_occupied')">Range Percent Occupied</button>
+            <button onclick="update(key='range_total_percent')">Range Total Percent</button>
+        </div>
     </div>
 </div>
 
-<div id="section4" class="container-fluid">
-    <div class="content">
-        <div class="separator"></div>
-        <h1>Section 4</h1>
-    </div>
-</div>
-
-<div id="section5" class="container-fluid">
-    <div class="content">
-        <div class="separator"></div>
-        <h1>Section 5</h1>
-    </div>
-</div>
-
-<div id="section6" class="container-fluid">
-    <div class="content">
-        <div class="separator"></div>
-        <h1>Section 6</h1>
-    </div>
-</div>
 
 
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="js/map.js"></script>
+<script src="js/chart.js"></script>
 </body>
 </html>

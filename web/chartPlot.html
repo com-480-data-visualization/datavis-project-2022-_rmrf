@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div id="my_dataviz">
-        <button onclick="update(df,key='abundance_mean')">Mean Abundance</button>
-        <button onclick="update(df,key='total_pop_percent')">Total Population</button>
-        <button onclick="update(df,key='range_percent_occupied')">Range Percent Occupied</button>
-        <button onclick="update(df,key='range_total_percent')">Range Total Percent</button>
+    <div id="bar_plot">
+        <button onclick="update(key='abundance_mean')">Mean Abundance</button>
+        <button onclick="update(key='total_pop_percent')">Total Population</button>
+        <button onclick="update(key='range_percent_occupied')">Range Percent Occupied</button>
+        <button onclick="update(key='range_total_percent')">Range Total Percent</button>
     </div>
     <script src="js/chart.js"></script>
 </body>
