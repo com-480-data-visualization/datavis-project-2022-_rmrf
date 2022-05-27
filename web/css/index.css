@@ -11,12 +11,58 @@
 .left_test{
     position: relative;
     left: 20px;
-    top: 150px;
+    top: 200px;
     bottom: 50px;
     width: 420px;
     height: 250px;
     text-align: center;
 }
+
+.bg-image, .ftco-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .ftco-cover {
+    background-position: center center;}
+    .ftco-cover .ftco-heading {
+      font-size: 70px;
+      line-height: 1.2;
+      color: #fff; }
+      @media (max-width: 991.98px) {
+        .ftco-cover .ftco-heading {
+          font-size: 37px;
+          line-height: 1.3; } }
+    .ftco-cover .ftco-subheading {
+      max-width: 450px;
+      line-height: 1.5; }
+    .ftco-cover .ftco-subheading, .ftco-cover p {
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 300;
+      font-family: "Komika Hand"; 
+  }
+    @media (max-width: 991.98px) {
+      .ftco-cover .btn {
+        width: 100% !important; } }
+    .ftco-cover a {
+      position: relative;
+      color: #fff; }
+    .ftco-cover.overlay {
+      position: relative; }
+      .ftco-cover.overlay:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0; }
+    .ftco-cover .ftco-vh-100 {
+      min-height: 700px !important; }
+
+
+
 
 .section {
     padding: 3em 0; }
