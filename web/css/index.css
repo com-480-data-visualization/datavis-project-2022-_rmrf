@@ -8,6 +8,15 @@
     text-align: center;
 }
 
+.left_test{
+    position: relative;
+    left: 20px;
+    top: 150px;
+    bottom: 50px;
+    width: 420px;
+    height: 250px;
+    text-align: center;
+}
 
 .section {
     padding: 3em 0; }
