@@ -54,7 +54,7 @@ function pie(data, key){
             .padRadius(innerRadius))
 
     // Add the labels
-    svg.append("g")
+    svg.append('g')
         .selectAll("g")
         .data(data)
         .enter()
@@ -66,6 +66,7 @@ function pie(data, key){
         .attr("transform", function(d) { return (x(d.region_name) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
         .style("font-size", "11px")
         .attr("alignment-baseline", "middle")
+
 
     // Add the second series
     svg.append("g")
