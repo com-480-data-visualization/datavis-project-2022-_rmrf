@@ -2,8 +2,8 @@ function  barPlot(
     svg_element_id='bar',
     width=800,
     height=500,
-    species_code='bbwduc',
-    season_name='year_round',
+    species_code=undefined,
+    season_name='breeding',
     region_type='country',
     data_type='abundance_mean',
     currentMonth=0,
@@ -37,7 +37,7 @@ function  barPlot(
 
     var country_code=undefined;
     d3.queue()
-        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data.csv")
+        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_bar")
         .await((error,df)=> {
 
             const seasons=Array.from(new Set(df.map(d=>d.season_name)));
@@ -95,7 +95,7 @@ function  barPlot(
                 setEvent();
             }
 
-            update();
+
 
             function zoom(svg) {
                 const extent = [[0, margin.top], [width + margin.left, height + margin.bottom]];;
@@ -140,7 +140,7 @@ function  barPlot(
 
             d3.select("#bar_birds")
                 .selectAll('myOptions')
-                .data(Array.from(new Set(df.map(d=>d.common_name))))
+                .data(Array.from(new Set(df.map(d=>d.common_name))).sort((a,b)=>a.localeCompare(b)))
                 .enter()
                 .append('option')
                 .text(function (d) { return d; }) // text showed in the menu
@@ -149,8 +149,8 @@ function  barPlot(
             d3.select("#bar_birds")
                 .on("change", function(d) {
                     let name=d3.select(this).property("value");
-                    console.log(df.filter(d=>d.common_name==name)[0].species_code)
                     species_code=df.filter(d=>d.common_name==name)[0].species_code;
+
                     update();
                 });
 
@@ -194,9 +194,11 @@ function  barPlot(
             d3.select("#bar_sort")
                 .on("change", function(d) {
                     sorting=d3.select(this).property("value");
-                    console.log(sorting);
                     update();
                 });
+
+            species_code=df[0].species_code;
+            update();
         })
 
 

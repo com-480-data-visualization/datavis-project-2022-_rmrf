@@ -1,10 +1,9 @@
 function  mapPlot(
     svg_element_id='map',
-    width=750,
-    height=500,
+    width=800,
+    height=400,
     species_code='bbwduc',
     season_name='breeding',
-    region_type='country',
     data_type='abundance_mean',
     currentMonth=0,
     playing=false,
@@ -51,9 +50,10 @@ function  mapPlot(
 
 
     d3.queue()
-        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data.csv")
+        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_map")
         .defer(d3.json,"https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
         .await((error,data,world)=>{
+            console.log(data)
             const data_map=d3.map();
             const seasons=[];
             const seasons_map=d3.map();
@@ -73,9 +73,14 @@ function  mapPlot(
                 }
             });
 
+            tip.html(function(d) {
+                return (d.properties.name+"<br/>"+d.total)
+
+            });
+
             function get_color_domain(x){
                 let dom=d3.map();
-                var temp=x.filter(d=>d.species_code==species_code && d.region_type==region_type).map(d=>d.abundance_mean);
+                var temp=x.filter(d=>d.species_code==species_code ).map(d=>d.abundance_mean);
                 dom.set('abundance_mean',[parseFloat(d3.min(temp))+1e-2,parseFloat(d3.max(temp))]);
                 temp=x.filter(d=>d.species_code==species_code).map(d=>d.total_pop_percent);
                 dom.set('total_pop_percent',[parseFloat(d3.min(temp))+1e-2,parseFloat(d3.max(temp))]);
@@ -90,10 +95,6 @@ function  mapPlot(
 
             var domains=get_color_domain(data);
 
-            tip.html(function(d) {
-                return (d.properties.name+"<br/>"+d.total)
-
-            });
 
             function update_color(){
                 colorScale.domain(domains.get(data_type));
@@ -160,7 +161,7 @@ function  mapPlot(
 
             d3.select("#map_birds")
                 .selectAll('myOptions')
-                .data(Array.from(new Set(data.map(d=>d.common_name))))
+                .data(Array.from(new Set(data.map(d=>d.common_name))).sort((a,b)=>a.localeCompare(b)))
                 .enter()
                 .append('option')
                 .text(function (d) { return d; }) // text showed in the menu
