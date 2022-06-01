@@ -1,11 +1,11 @@
 function  piePlot(
     svg_element_id='pie',
-    width=800,
-    height=800,
+    width=750,
+    height=750,
     continent=undefined,
     country=undefined,
     region=undefined,
-    margin = {top: 30, right: 30, bottom: 70, left: 60},
+    margin = {top: 10, right: 30, bottom: 30, left: 10},
     innerRadius = 200
 ) {
 
@@ -47,7 +47,7 @@ function  piePlot(
                 u.enter()
                     .append("g")
                     .attr("text-anchor", function (d) {
-                        return (x(d) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start";
+                        return "start";
                     })
                     .attr("transform", function (d) {
                         return "rotate(" + ((x(d) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")" + "translate(" + (innerRadius) + ",0)";
@@ -56,11 +56,27 @@ function  piePlot(
                     .text(function (d) {
                         return (d)
                     })
-                    .attr("transform", function (d) {
-                        return (x(d) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)";
-                    })
                     .style("font-size", "11px")
                     .attr("alignment-baseline", "middle")
+                    .attr("font-weight",function(d) {return 400;})
+                    .on("mouseover",function (d){
+                        d3.select(this)
+                            .attr("font-weight",function(d) {return 900;})
+                            .attr("font-size", "20px")
+                    })
+                    .on("mouseout",function (d){
+                        d3.select(this)
+                            .attr("font-weight",function(d) {return 400;})
+                            .attr("font-size", "11px")
+                    })
+                    .on("click",function (d){
+                        let rotation=((x(d) + x.bandwidth() / 2) * 180 / Math.PI - 90);
+                        svg.selectAll('g').transition()
+                            .attr("transform",  function (d1) {
+                                return "rotate(" + ((x(d1) + x.bandwidth() / 2) * 180 / Math.PI - 90-rotation) + ")" + "translate(" + (innerRadius) + ",0)";
+                            })
+                            .duration(1000);
+                    });
 
 
             }

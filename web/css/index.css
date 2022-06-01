@@ -65,10 +65,10 @@
 }
 
 .section {
-    padding: 1em 0; }
+    padding: 2em 0; }
 
 .separator{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .d3-tip {
@@ -84,7 +84,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 70%;
     vertical-align: top;
     overflow: hidden;
 }

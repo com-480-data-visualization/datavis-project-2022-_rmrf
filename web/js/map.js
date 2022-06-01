@@ -1,7 +1,7 @@
 function  mapPlot(
     svg_element_id='map',
-    width=800,
-    height=400,
+    width=1000,
+    height=600,
     species_code='bbwduc',
     season_name='breeding',
     data_type='abundance_mean',
@@ -32,7 +32,7 @@ function  mapPlot(
     var tip = d3.tip()
         .attr('class', 'd3-tip')
         .offset([0, 0])
-        .direction('s');
+        .direction('e');
 
     svg.call(tip);
 

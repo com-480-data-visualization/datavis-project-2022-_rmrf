@@ -19,6 +19,7 @@
     <script src="js/tip.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://bl.ocks.org/syntagmatic/raw/3341641/render-queue.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -37,7 +38,7 @@
 </nav>
 
 
-<section class="ftco-cover" id="home" style="background-image: url(images/icon_2.jpg)" data-aos="fade"  data-stellar-background-ratio="0.5" background-size: contain>
+<section id="home" style="background-image: url(images/icon_2.jpg); -moz-background-size: 100% 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%;" data-aos="fade"  data-stellar-background-ratio="0.5" >
     <div class="container">
         <div class="left_test">
             <div data-aos="fade-up"  data-aos-delay="500">
@@ -45,7 +46,7 @@
                 <h2   style="color:floralwhite; opacity: 1; font-size: 25px;" >_rmrf Team</h2>
             </div>
             <div class="separator" data-aos="fade-up" data-aos-delay="1000">
-                <p style="color:floralwhite; opacity: 1; font-size: 20px;">This website enables one to exhaust statistics features of various birds around the world: 
+                <p style="color:floralwhite; opacity: 1; font-size: 20px;">This website enables one to exhaust statistics features of various birds around the world:
                     how they distribute within different periods, what’s the variation between regions, what’s the abundance of population, etc.</p>
             </div>
 
@@ -59,7 +60,7 @@
     <div class="container" >
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <h1 class="ftco-heading heading-thin">Geometric Visualization</h1>
-            <p>Content 1</p>
+            <p>In this section, we will show the range of birds at different times of the year. You can select different filters in the drop-down boxes to get the desired results. The same holds true for the different time and space options, you can get information about different areas directly on the map. You can also get an animation of the distribution of birds over a certain time frame.</p>
             <div id="map_plot">
                 <select id="map_birds"></select>
                 <select id="map_data_type"></select>
@@ -76,7 +77,7 @@
     <div class="container">
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <h1 class="ftco-heading heading-thin">Statistic Features</h1>
-            <p>In this part, we show explicit statistic features of different birds around worldwide. Chart plot shows basic statistics about the 
+            <p>In this part, we show explicit statistic features of different birds around worldwide. Chart plot shows basic statistics about the
                 abundance and population of a bird within different regions, while pie chart gives a more intuitive view on the rank of bird distributions.
                 Both plots provide exhuasted conclusions about bird distributions.  </p>
             <div id="bar_plot">
@@ -95,11 +96,31 @@
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <h1 class="ftco-heading heading-thin">Section 3</h1>
             <p>Content 3</p>
+            <div id="pie_plot">
+                <select id="pie_continent"></select>
+                <select id="pie_country"></select>
+                <select id="pie_region"></select>
+                <div id="pie" class="svg-container">
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-
+<section class="section" id="section4">
+    <div class="container">
+        <div class="" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="ftco-heading heading-thin">Section 3</h1>
+            <p>Content 3</p>
+            <div id="parallel_plot">
+                <p>All Birds:<select id="all_birds" ></select>  Selected Birds： <select id="selected_birds" ></select>  <button id="reset_selection">reset</button></p>
+                <div id="parallel" class="svg-container">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer class="section">
     <div class="container">
@@ -135,5 +156,7 @@
 </script>
 <script src="js/map.js"></script>
 <script src="js/bar.js"></script>
+<script src="js/pie.js"></script>
+<script src="js/parallel.js"></script>
 </body>
 </html>

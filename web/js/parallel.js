@@ -1,8 +1,8 @@
 function parallelPlot(
     svg_element_id='parallel',
-    width = document.body.clientWidth ,
+    width = 1000 ,
     height = 500 ,
-    margin = {top: 66, right: 110, bottom: 20, left: 188},
+    margin = {top: 50, right: 110, bottom: 20, left: 50},
     name=[],
 ){
     width=width- margin.left - margin.right;
@@ -93,8 +93,8 @@ function parallelPlot(
         .attr("height", height * devicePixelRatio)
         .style("width", width + "px")
         .style("height", height + "px")
-        .style("margin-top", (margin.top-5) + "px")
-        .style("margin-left", (margin.left-5) + "px");
+        .style("margin-top", (margin.top) + "px")
+        .style("margin-left", (margin.left) + "px");
 
     var ctx = canvas.node().getContext("2d");
     ctx.globalCompositeOperation = 'darken';
@@ -254,8 +254,6 @@ function parallelPlot(
             }
 
         }
-
-
 
 
         function update_selected_birds(){
