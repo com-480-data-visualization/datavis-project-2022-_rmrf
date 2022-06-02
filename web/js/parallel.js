@@ -2,7 +2,7 @@ function parallelPlot(
     svg_element_id='parallel',
     width = 1000 ,
     height = 500 ,
-    margin = {top: 50, right: 110, bottom: 20, left: 50},
+    margin = {top: 50, right: 110, bottom: 20, left: 100},
     name=[],
 ){
     width=width- margin.left - margin.right;
