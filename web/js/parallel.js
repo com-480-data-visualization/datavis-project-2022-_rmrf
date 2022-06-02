@@ -35,8 +35,8 @@ function parallelPlot(
                 })
         },
         {
-            key: "country_code",
-            description: "country_code",
+            key: "country",
+            description: "country",
             type: types["String"]
         },
         {
