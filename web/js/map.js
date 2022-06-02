@@ -50,7 +50,7 @@ function  mapPlot(
 
 
     d3.queue()
-        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_map")
+        .defer(d3.csv,"https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_map")
         .defer(d3.json,"https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
         .await((error,data,world)=>{
             console.log(data)

@@ -37,7 +37,7 @@ function  barPlot(
 
     var country_code=undefined;
     d3.queue()
-        .defer(d3.csv,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_bar")
+        .defer(d3.csv,"https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_bar")
         .await((error,df)=> {
 
             const seasons=Array.from(new Set(df.map(d=>d.season_name)));

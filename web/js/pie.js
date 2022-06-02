@@ -24,7 +24,7 @@ function  piePlot(
         .range([0, 2 * Math.PI]);
 
     d3.queue()
-        .defer(d3.json,"http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_pie.json")
+        .defer(d3.json,"https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_pie.json")
         .await((error,df)=> {
             continent=df[0].name;
             country=df[0].children[0].name;

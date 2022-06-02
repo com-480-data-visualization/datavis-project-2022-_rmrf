@@ -110,7 +110,7 @@ function parallelPlot(
         .attr("class", function(d) { return "axis " + d.key.replace(/ /g, "_"); })
         .attr("transform", function(d,i) { return "translate(" + xscale(i) + ")"; });
 
-    d3.csv("http://localhost:8000/PycharmProjects/datavis-project-2022-_rmrf/data/data_bar", function(error, df) {
+    d3.csv("https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_bar", function(error, df) {
         if (error) throw error;
         let selected_birds=[];
 
