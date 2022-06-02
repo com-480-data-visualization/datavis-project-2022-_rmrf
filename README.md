@@ -1,4 +1,6 @@
 # BirdDistribution-DataVisualization
+## Link to our website
+https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/
 ## Dataset discription
 The dataset we used is from [eBird](https://ebird.org/home), an online bird observation database with real-time bird distribution and abundance data. The data on the eBird database is collected from millions of birdwatchers all over the world and managed by [Cornell Lab of Ornithology](https://www.birds.cornell.edu/home). "Data quality is of critical importance. When entering sightings, observers are presented with a list of likely birds for that date and region. These checklist filters are developed by some of the most knowledgeable bird distribution experts in the world." As quoted from the eBird website, the data is reviewed by many bird experts, and a recommended python/R code is used to analyze the data.
 The fields of our data include items are as follows:
