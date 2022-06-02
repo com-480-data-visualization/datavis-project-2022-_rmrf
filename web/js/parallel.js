@@ -2,7 +2,7 @@ function parallelPlot(
     svg_element_id='parallel',
     width = 1150 ,
     height = 650 ,
-    margin = {top: 50, right: 110, bottom: 20, left: 100},
+    margin = {top: 50, right: 110, bottom: 20, left: 120},
     name=[],
 ){
     width=width- margin.left - margin.right;
@@ -289,9 +289,12 @@ function parallelPlot(
             update_selected_birds();
         })
 
+        d3.select('#all_birds').property("value",'none');
+
         d3.select('#reset_selection')
             .on('click',function (){
                 selected_birds=[];
+                d3.select('#all_birds').property("value",'none');
                 update_selected_birds();
             })
 

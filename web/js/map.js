@@ -124,6 +124,8 @@ function  mapPlot(
             });
 
             function update(){
+                d3.select("#map_month").property("value",currentMonth);
+                d3.select("#map_seasons").property("value",season_name);
                 map_container.selectAll("#mapPath")
                     .transition()  //select all the countries and prepare for a transition to new values
                     .duration(500)
