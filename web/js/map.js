@@ -67,7 +67,7 @@ function  mapPlot(
                     seasons.push(d.season_name);
                 }
                 if(d.season_name!='year_round'){
-                    for(let i=parseInt(d.start_dt.split('-')[1]);i<=parseInt(d.end_dt.split('-')[1]);i++){
+                    for(let i=parseInt(d.start_dt.split('-')[1]);i<parseInt(d.end_dt.split('-')[1])+parseInt(d.end_dt.split('-')[2])/15;i++){
                         seasons_map.set(d.species_code+'_'+i,d.season_name);
                     }
                 }
@@ -124,8 +124,6 @@ function  mapPlot(
             });
 
             function update(){
-                d3.select("#map_month").property("value",currentMonth);
-                d3.select("#map_seasons").property("value",season_name);
                 map_container.selectAll("#mapPath")
                     .transition()  //select all the countries and prepare for a transition to new values
                     .duration(500)
@@ -190,10 +188,12 @@ function  mapPlot(
             d3.select("#map_seasons")
                 .on("change", function(d) {
                     season_name=d3.select(this).property("value");
-                    currentMonth=[1,2,3,4,5,6,7,8,9,10,11,12]
-                                .map(d=>[d,seasons_map.get(species_code+'_'+d) || 'year_round'])
-                                .filter(d=>d[1]==season_name).map(d=>d[0])[0]||0;
+                    currentMonth=[1,2,3,4,5,6,7,8,9,10,11,12].map(d=>[d,seasons_map.get(species_code+'_'+d)||'year_round'])
+                        .filter(d=>d[1]==season_name).map(d=>d[0])[0]||0;
                     update();
+                    clearInterval(timer);
+                    d3.select('#play').html('play');
+                    playing = false;
                 });
 
             d3.select("#map_data_type")
@@ -201,7 +201,7 @@ function  mapPlot(
                 .data(['abundance_mean','total_pop_percent','range_percent_occupied','range_total_percent'])
                 .enter()
                 .append('option')
-                .text(function (d) { return d; }) // text showed in the menu
+                .text(function (d) { return d; })
                 .attr("value", function (d) { return d; });
 
             d3.select("#map_data_type")
@@ -216,7 +216,7 @@ function  mapPlot(
                 .data([1,2,3,4,5,6,7,8,9,10,11,12])
                 .enter()
                 .append('option')
-                .text(function (d) { return d; }) // text showed in the menu
+                .text(function (d) { return d; })
                 .attr("value", function (d) { return d; });
 
             d3.select("#map_month")
@@ -224,13 +224,11 @@ function  mapPlot(
                     currentMonth=d3.select(this).property("value");
                     season_name=seasons_map.get(species_code+'_'+currentMonth) || 'year_round';
                     update();
-                    clearInterval(timer);   // stop the animation by clearing the interval
-                    d3.select('#play').html('play');   // change the button label to play
-                    playing = false;   // change the status again
+                    clearInterval(timer);
+                    d3.select('#play').html('play');
+                    playing = false;
                 });
-            season_name=seasons_map.get(species_code+'_'+currentMonth) || 'year_round';
-            currentMonth=1;
-            update();
+
         })
 
 }
