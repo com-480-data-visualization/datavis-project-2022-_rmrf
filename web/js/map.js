@@ -124,6 +124,8 @@ function  mapPlot(
             });
 
             function update(){
+                d3.select("#map_month").property("value",currentMonth);
+                d3.select("#map_seasons").property("value",season_name);
                 map_container.selectAll("#mapPath")
                     .transition()  //select all the countries and prepare for a transition to new values
                     .duration(500)
@@ -188,6 +190,9 @@ function  mapPlot(
             d3.select("#map_seasons")
                 .on("change", function(d) {
                     season_name=d3.select(this).property("value");
+                    currentMonth=[1,2,3,4,5,6,7,8,9,10,11,12]
+                                .map(d=>[d,seasons_map.get(species_code+'_'+d) || 'year_round'])
+                                .filter(d=>d[1]==season_name).map(d=>d[0])[0]||0;
                     update();
                 });
 
@@ -223,6 +228,9 @@ function  mapPlot(
                     d3.select('#play').html('play');   // change the button label to play
                     playing = false;   // change the status again
                 });
+            season_name=seasons_map.get(species_code+'_'+currentMonth) || 'year_round';
+            currentMonth=1;
+            update();
         })
 
 }
