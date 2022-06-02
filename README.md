@@ -84,7 +84,7 @@ Some visualization works have already been done.
 All visualization projects listed here are animations to show bird migration either by points moving towards a specific direction or distribution change.  Our project prefers to visualize the data in an interactive way to attract people to explore the bird migration.
 
 ## Milestone 2
-The report of milestone 2 is [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
+The report of milestone 2 is [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/blob/main/Milestone%202%20Report.pdf)
 
 ## Milestone 3
 The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
