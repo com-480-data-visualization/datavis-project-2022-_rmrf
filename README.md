@@ -1,4 +1,13 @@
-# BirdDistribution-DataVisualization
+# BirdDistribution-DataVisualization(Team: $_rmrf$)
+
+
+| Member   |    SCIPER     |
+|----------|:-------------:|
+| Zewei Xu |  left-aligned |
+| Hanyuan Hu |    centered   |
+| Qiming Sun | right-aligned |
+
+
 ## Link to our website
 https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/
 
