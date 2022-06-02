@@ -65,10 +65,12 @@
 }
 
 .section {
-    padding: 2em 0; }
+    padding: 1em 0; 
+    background-color: rgba(167, 192, 65, 0.429);    
+}
 
 .separator{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .d3-tip {
@@ -84,7 +86,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 70%;
+    padding-bottom: 50%;
     vertical-align: top;
     overflow: hidden;
 }
@@ -183,4 +185,8 @@ pre {
     tab-size: 40;
     font-size: 10px;
     overflow: auto;
+}
+
+.content {
+    font-size: 17px;
 }
