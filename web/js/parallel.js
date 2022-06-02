@@ -1,7 +1,7 @@
 function parallelPlot(
     svg_element_id='parallel',
-    width = 1000 ,
-    height = 500 ,
+    width = 1150 ,
+    height = 650 ,
     margin = {top: 50, right: 110, bottom: 20, left: 100},
     name=[],
 ){
@@ -110,12 +110,12 @@ function parallelPlot(
         .attr("class", function(d) { return "axis " + d.key.replace(/ /g, "_"); })
         .attr("transform", function(d,i) { return "translate(" + xscale(i) + ")"; });
 
-    d3.csv("https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_bar", function(error, df) {
+    d3.csv("https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_map", function(error, df) {
         if (error) throw error;
         let selected_birds=[];
 
         function update(){
-            let data=df.filter(d=> selected_birds.includes(d.common_name) && d.region_type=='state');
+            let data=df.filter(d=> selected_birds.includes(d.common_name));
             data.forEach(function(d) {
                 dimensions.forEach(function(p) {
                     d[p.key] = !d[p.key] ? null : p.type.coerce(d[p.key]);

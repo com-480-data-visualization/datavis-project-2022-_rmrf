@@ -1,13 +1,13 @@
 function  barPlot(
     svg_element_id='bar',
-    width=1000,
-    height=600,
+    width=950,
+    height=550,
     species_code=undefined,
     season_name='breeding',
     region_type='country',
     data_type='abundance_mean',
     currentMonth=0,
-    margin = {top: 30, right: 30, bottom: 70, left: 60},
+    margin = {top: 30, right: 30, bottom: 130, left: 60},
     sorting=0
 ) {
 
@@ -65,7 +65,9 @@ function  barPlot(
                 x.domain(data.map(function (d) {
                     return d['region_name']
                 }))
-                xAxis.call(d3.axisBottom(x)).attr('id', 'xaxis');
+                xAxis.call(d3.axisBottom(x)).attr('id', 'xaxis').selectAll('text').attr("transform", function (d) {
+                    return "rotate(20)" + "translate("+(this.getComputedTextLength()*0.5)+","+0+")";
+                });
                 y.domain([0, d3.max(data, function (d) {
                     return +d[data_type];
                 })]);
@@ -110,7 +112,9 @@ function  barPlot(
                     svg.selectAll("rect")
                         .attr("x", d => x(d['region_name']))
                         .attr("width", x.bandwidth());
-                    xAxis.transition().duration(500).call(d3.axisBottom(x)).attr('id','xaxis');
+                    xAxis.transition().duration(500).call(d3.axisBottom(x)).selectAll('text').attr("transform", function () {
+                        return "rotate(20)" + "translate("+(this.getComputedTextLength()*0.5)+","+0+")";
+                    });
                 }
             }
 

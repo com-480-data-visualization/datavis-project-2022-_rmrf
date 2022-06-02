@@ -5,7 +5,7 @@ function  piePlot(
     continent=undefined,
     country=undefined,
     region=undefined,
-    margin = {top: 10, right: 30, bottom: 30, left: 10},
+    margin = {top: 10, right: 20, bottom: 30, left: 20},
     innerRadius = 200
 ) {
 

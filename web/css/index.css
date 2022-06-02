@@ -65,12 +65,11 @@
 }
 
 .section {
-    padding: 1em 0; 
-    background-color: rgba(167, 192, 65, 0.429);    
+    padding: 1em 0;
 }
 
 .separator{
-    margin-top: 50px;
+    margin-top: 10%;
 }
 
 .d3-tip {
@@ -86,7 +85,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 100%;
     vertical-align: top;
     overflow: hidden;
 }
@@ -101,6 +100,7 @@ svg {
 
 body {
     min-width: 760px;
+    background-color: rgba(167, 192, 65, 0.429);
 }
 
 .parcoords {
@@ -188,5 +188,6 @@ pre {
 }
 
 .content {
+    margin-top: 20px;
     font-size: 17px;
 }

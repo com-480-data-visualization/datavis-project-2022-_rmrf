@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/tip.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://bl.ocks.org/syntagmatic/raw/3341641/render-queue.js"></script>
 </head>
 <body>
-    <div id="bar_plot">
-        <select id="bar_birds"></select>
-        <select id="bar_data_type"></select>
-        <select id="bar_seasons"></select>
-        <select id="bar_sort"></select>
-        <div id="bar">
 
+<section class="section" id="section2">
+    <div class="container">
+        <div class="" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="ftco-heading heading-thin">Statistic Features</h1>
+            <div class="'row" style="margin-top: 20px;">
+                <div id="bar_plot" class="col-md-10 thumbnail" style="width: 950px; height: 550px">
+                    <p style="margin-left: 3px;"> Bird:<select id="bar_birds"></select> Data:<select id="bar_data_type"></select> Season:<select id="bar_seasons"></select> Order:<select id="bar_sort"></select></p>
+                    <div id="bar" class="svg-container"></div>
+                </div>
+                <div class="col-md-2 content">
+                    <p>In this part, we show explicit statistic features of different birds around worldwide. Chart plot shows basic statistics about the
+                        abundance and population of a bird within different regions, while pie chart gives a more intuitive view on the rank of bird distributions.
+                        Both plots provide exhuasted conclusions about bird distributions.  </p></div>
+            </div>
         </div>
     </div>
+</section>
     <script src="js/bar.js"></script>
 </body>
 </html>
