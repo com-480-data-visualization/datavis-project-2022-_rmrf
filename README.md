@@ -1,4 +1,4 @@
-# BirdDistribution-DataVisualization(Team: $_rmrf$)
+# BirdDistribution-DataVisualization(Team: _rmrf)
 
 
 | Member   |    SCIPER     |
