@@ -11,16 +11,25 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/tip.js"></script>
     <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 </head>
 <body>
-<div id = 'section' class="center">
-    <select id="map_birds"></select>
-    <select id="map_data_type"></select>
-    <select id="map_seasons"></select>
-    <select id="map_month"></select>
-    <button id="play">Play</button>
-    <div id="map" class="svg_container" ></div>
-</div>
+    <section class="section" id="section1">
+        <div class="container" >
+            <div class="" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="ftco-heading heading-thin">Geometric Visualization</h1>
+                <div class="'row" style="margin-top: 20px;">
+                    <div class="col-md-2 content">
+                        <p >In this section, we will show the range of birds at different times of the year. You can select different filters in the drop-down boxes to get the desired results. The same holds true for the different time and space options, you can get information about different areas directly on the map. You can also get an animation of the distribution of birds over a certain time frame.</p>
+                    </div>
+                    <div id="map_plot" class="col-md-10 thumbnail">
+                        <p style="margin-left: 5px;"> Bird: <select id="map_birds"></select> Data: <select id="map_data_type"></select> Season: <select id="map_seasons"></select> Month: <select id="map_month"></select> <button id="play">Play</button></p>
+                        <div id="map" class="svg-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script src="js/map.js"></script>
 </body>
