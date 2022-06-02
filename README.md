@@ -1,4 +1,13 @@
-# BirdDistribution-DataVisualization
+# BirdDistribution-DataVisualization(Team: _rmrf)
+
+
+| Member   |    SCIPER     |
+|----------|:-------------:|
+| Zewei Xu |  left-aligned |
+| Hanyuan Hu |    centered   |
+| Qiming Sun | right-aligned |
+
+
 ## Link to our website
 https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/
 
@@ -89,4 +98,4 @@ The report of milestone 2 is [here](https://github.com/com-480-data-visualizatio
 ## Milestone 3
 The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
 
-The screenshot is [here](https://www.youtube.com/)
+The screencast is [here](https://www.youtube.com/)
