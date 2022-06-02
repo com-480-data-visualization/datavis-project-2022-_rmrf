@@ -1,6 +1,8 @@
 # BirdDistribution-DataVisualization
 ## Link to our website
 https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/
+
+## Milestone 1
 ## Dataset discription
 The dataset we used is from [eBird](https://ebird.org/home), an online bird observation database with real-time bird distribution and abundance data. The data on the eBird database is collected from millions of birdwatchers all over the world and managed by [Cornell Lab of Ornithology](https://www.birds.cornell.edu/home). "Data quality is of critical importance. When entering sightings, observers are presented with a list of likely birds for that date and region. These checklist filters are developed by some of the most knowledgeable bird distribution experts in the world." As quoted from the eBird website, the data is reviewed by many bird experts, and a recommended python/R code is used to analyze the data.
 The fields of our data include items are as follows:
@@ -80,3 +82,10 @@ Some visualization works have already been done.
 3. https://news.cornell.edu/stories/2020/03/ornithology-lab-releases-high-resolution-migration-maps
 
 All visualization projects listed here are animations to show bird migration either by points moving towards a specific direction or distribution change.  Our project prefers to visualize the data in an interactive way to attract people to explore the bird migration.
+
+## Milestone 2
+The report of milestone 2 is [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
+
+## Milestone 3
+The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
+The screenshot is [here](https://www.youtube.com/)
