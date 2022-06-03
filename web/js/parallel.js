@@ -252,7 +252,6 @@ function parallelPlot(
 
         d3.select('#all_birds')
             .on("change",function() {
-            console.log('here');
             name=d3.select(this).property("value");
             if(selected_birds.includes(name)){
                 return;
@@ -284,12 +283,10 @@ function whenDocumentLoaded(action) {
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", action);
     } else {
-        // `DOMContentLoaded` already fired
         action();
     }
 }
 
 whenDocumentLoaded(() => {
     plot_object = parallelPlot('parallel');
-    // plot object is global, you can inspect it in the dev-console
 });

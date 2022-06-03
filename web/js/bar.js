@@ -122,9 +122,7 @@ function  barPlot(
                 svg.selectAll("rect")
                     .on('click',function (d){
                         d3.event.stopPropagation();
-                        console.log(d)
                         if(region_type=='country'){
-                            console.log('inside');
                             region_type='state';
                             country_code=d.country_code;
                             update();
@@ -216,12 +214,10 @@ function whenDocumentLoaded(action) {
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", action);
     } else {
-        // `DOMContentLoaded` already fired
         action();
     }
 }
 
 whenDocumentLoaded(() => {
     plot_object = barPlot('bar');
-    // plot object is global, you can inspect it in the dev-console
 });

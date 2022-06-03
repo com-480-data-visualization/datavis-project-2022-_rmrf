@@ -29,7 +29,6 @@ function  piePlot(
             continent=df[0].name;
             country=df[0].children[0].name;
             region=df[0].children[0].children[0].name;
-            console.log(continent,country,region);
 
             function filter_data() {
                 return df.filter(d=>d.name==continent)[0].children.filter(d=>d.name==country)[0].children.filter(d=>d.name==region)[0].children.map(d=>d.name);
@@ -154,12 +153,10 @@ function whenDocumentLoaded(action) {
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", action);
     } else {
-        // `DOMContentLoaded` already fired
         action();
     }
 }
 
 whenDocumentLoaded(() => {
     plot_object = piePlot('pie');
-    // plot object is global, you can inspect it in the dev-console
 });

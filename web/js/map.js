@@ -53,7 +53,6 @@ function  mapPlot(
         .defer(d3.csv,"https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_map")
         .defer(d3.json,"https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
         .await((error,data,world)=>{
-            console.log(data)
             const data_map=d3.map();
             const seasons=[];
             const seasons_map=d3.map();
@@ -90,7 +89,6 @@ function  mapPlot(
                 dom.set('range_percent_occupied',[parseFloat(d3.min(temp))+1e-2,parseFloat(d3.max(temp))]);
                 temp=x.filter(d=>d.species_code==species_code).map(d=>d.range_total_percent);
                 dom.set('range_total_percent',[parseFloat(d3.min(temp))+1e-2,parseFloat(d3.max(temp))]);
-                console.log(dom);
                 return dom;
             }
 
@@ -148,7 +146,6 @@ function  mapPlot(
                             } else {
                                 currentMonth = 1;  // or reset it to zero
                             }
-                            console.log(currentMonth);
                             season_name=seasons_map.get(species_code+'_'+currentMonth) || 'year_round';
                             update();
 
@@ -174,7 +171,6 @@ function  mapPlot(
             d3.select("#map_birds")
                 .on("change", function(d) {
                     let name=d3.select(this).property("value");
-                    console.log(data.filter(d=>d.common_name==name)[0].species_code)
                     species_code=data.filter(d=>d.common_name==name)[0].species_code;
                     domains=get_color_domain(data);
                     update();
@@ -296,12 +292,10 @@ function whenDocumentLoaded(action) {
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", action);
     } else {
-        // `DOMContentLoaded` already fired
         action();
     }
 }
 
 whenDocumentLoaded(() => {
     plot_object = mapPlot('map');
-    // plot object is global, you can inspect it in the dev-console
 });
