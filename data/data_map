@@ -4599,14 +4599,14 @@ brthum,Broad-tailed Hummingbird,Selasphorus platycercus,breeding,2020-05-31,2020
 brthum,Broad-tailed Hummingbird,Selasphorus platycercus,nonbreeding,2020-11-09,2020-01-25,0.0,0.0022,0.0004,0.0107,United States,USA
 brthum,Broad-tailed Hummingbird,Selasphorus platycercus,postbreeding_migration,2020-07-20,2020-11-02,0.0241,0.7092,0.0727,0.5547,United States,USA
 brthum,Broad-tailed Hummingbird,Selasphorus platycercus,prebreeding_migration,2020-02-01,2020-05-24,0.0173,0.8928,0.0873,0.7202,United States,USA
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,breeding,2020-05-24,2020-08-24,0.1039,0.9394,0.2892,0.9595,Mexico,MEX
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,nonbreeding,2020-12-28,2020-01-18,0.1596,0.9991,0.2706,0.9985,Mexico,MEX
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,postbreeding_migration,2020-08-31,2020-09-21,0.0558,0.9494,0.1613,0.9566,Mexico,MEX
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,prebreeding_migration,2020-02-22,2020-05-03,0.1243,0.9778,0.3091,0.9706,Mexico,MEX
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,breeding,2020-05-24,2020-08-24,0.0014,0.0606,0.0026,0.0405,United States,USA
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,nonbreeding,2020-12-28,2020-01-18,0.0,0.0009,0.0001,0.0015,United States,USA
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,postbreeding_migration,2020-08-31,2020-09-21,0.0006,0.0505,0.0015,0.043,United States,USA
-y00374,Broad-billed/Turquoise-crowned Hummingbird,Cynanthus latirostris/doubledayi,prebreeding_migration,2020-02-22,2020-05-03,0.0006,0.0222,0.002,0.0294,United States,USA
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,breeding,2020-05-24,2020-08-24,0.1039,0.9394,0.2892,0.9595,Mexico,MEX
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,nonbreeding,2020-12-28,2020-01-18,0.1596,0.9991,0.2706,0.9985,Mexico,MEX
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,postbreeding_migration,2020-08-31,2020-09-21,0.0558,0.9494,0.1613,0.9566,Mexico,MEX
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,prebreeding_migration,2020-02-22,2020-05-03,0.1243,0.9778,0.3091,0.9706,Mexico,MEX
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,breeding,2020-05-24,2020-08-24,0.0014,0.0606,0.0026,0.0405,United States,USA
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,nonbreeding,2020-12-28,2020-01-18,0.0,0.0009,0.0001,0.0015,United States,USA
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,postbreeding_migration,2020-08-31,2020-09-21,0.0006,0.0505,0.0015,0.043,United States,USA
+y00374,Broad-billed,Cynanthus latirostris/doubledayi,prebreeding_migration,2020-02-22,2020-05-03,0.0006,0.0222,0.002,0.0294,United States,USA
 vichum,Violet-crowned Hummingbird,Leucolia violiceps,breeding,2020-04-12,2020-06-14,0.0429,0.9999,0.1848,0.9997,Mexico,MEX
 vichum,Violet-crowned Hummingbird,Leucolia violiceps,nonbreeding,2020-10-19,2020-02-08,0.0427,1.0,0.1703,0.9999,Mexico,MEX
 vichum,Violet-crowned Hummingbird,Leucolia violiceps,postbreeding_migration,2020-06-21,2020-10-12,0.0267,0.9988,0.127,0.9959,Mexico,MEX
