@@ -96,6 +96,6 @@ All visualization projects listed here are animations to show bird migration eit
 The report of milestone 2 is [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/blob/main/Milestone%202%20Report.pdf)
 
 ## Milestone 3
-The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
+The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/blob/main/Process%20book.pdf)
 
 The screencast is [here](https://youtu.be/xrt3H-RYrVY)
