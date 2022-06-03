@@ -14,7 +14,8 @@
 
 #home {
     background-position: center center;
-    min-height: 700px;}
+    min-height: 969px;
+}
 
 
 .center {
@@ -83,7 +84,7 @@
 }
 
 .separator{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .d3-tip {
