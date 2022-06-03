@@ -9,6 +9,7 @@
 
 
 ## Link to our website
+
 https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/
 
 ## Milestone 1
@@ -99,3 +100,11 @@ The report of milestone 2 is [here](https://github.com/com-480-data-visualizatio
 The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/blob/main/Process%20book.pdf)
 
 The screencast is [here](https://youtu.be/os_b8vm7ok8)
+
+## External Frameworks & Libraries
+* Bootstrap
+* JQuery
+* AOS
+* D3.js & d3.legend
+* Render Queue
+* tip.js
