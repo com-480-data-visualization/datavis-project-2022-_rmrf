@@ -90,7 +90,7 @@ function  barPlot(
                     .attr("height", function (d) {
                         return height - y(d[data_type]);
                     })
-                    .attr("fill", "#69b3a2");
+                    .attr("fill", "#c4b06d");
                 u.exit()
                     .remove();
 

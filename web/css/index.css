@@ -310,3 +310,79 @@ body {
     font-size: 24px;
     color: #601414;
 }
+
+#map_plot {
+    color: #484800;
+}
+
+#map_plot p {
+    margin-top: 2px;
+    margin-left: 5px;
+    font-size: 17px;
+    font-family: Gabriola;
+    font-weight: bold;
+}
+
+#map_plot p select {
+    font-size: 15px;
+    font-family: SentyTEA;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+#bar_plot {
+    color: #604800;
+}
+
+#bar_plot p {
+    margin-top: 2px;
+    margin-left: 5px;
+    font-size: 17px;
+    font-family: Gabriola;
+    font-weight: bold;
+}
+
+#bar_plot p select {
+    font-size: 15px;
+    font-family: SentyTEA;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+#pie_plot {
+    color: #694400;
+}
+
+#pie_plot p {
+    margin-top: 4px;
+    margin-left: 5px;
+    font-size: 17px;
+    font-family: Gabriola;
+    font-weight: bold;
+}
+
+#pie_plot p select {
+    font-size: 15px;
+    font-family: SentyTEA;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+#parallel_plot {
+    color: #591a00;
+}
+
+#parallel_plot p {
+    margin-top: 4px;
+    margin-left: 5px;
+    font-size: 17px;
+    font-family: Gabriola;
+    font-weight: bold;
+}
+
+#parallel_plot p select {
+    font-size: 15px;
+    font-family: SentyTEA;
+    margin-right: 5px;
+    font-weight: normal;
+}

@@ -163,7 +163,7 @@ function parallelPlot(
 
 
             function draw(d) {
-                ctx.strokeStyle = "#b2f3eb";
+                ctx.strokeStyle = "#e58d60";
                 ctx.beginPath();
                 var coords = dimensions.map(function(p,i) {
                     return [xscale(i),p.scale(d[p.key])];
