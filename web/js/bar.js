@@ -1,6 +1,6 @@
 function  barPlot(
     svg_element_id='bar',
-    width=950,
+    width=900,
     height=550,
     species_code=undefined,
     season_name='breeding',

@@ -7,6 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -42,11 +43,11 @@
     <div class="container">
         <div class="left_test">
             <div data-aos="fade-up"  data-aos-delay="500" style="margin-top: 40%">
-                <h1   style="color:floralwhite; opacity: 1;font-size: 55px;">Bird Distribution</h1>
-                <h2   style="color:floralwhite; opacity: 1; font-size: 25px;" >_rmrf Team</h2>
+                <h1 id="hometitle">Bird Distribution</h1>
+                <h2 style="color:floralwhite; opacity: 1; font-size: 25px; font-family: SentyTEA;">Team _rmrf</h2>
             </div>
             <div class="separator" data-aos="fade-up" data-aos-delay="1000">
-                <p style="color:floralwhite; opacity: 1; font-size: 20px;">This website offers the visualization of statistics features about various bird species around the world:
+                <p id="homeintro">This website offers the visualization of statistics features about various bird species around the world:
                     their distribution in different periods, the variation among different geographic regions, the population abundance, etc.</p>
             </div>
 
@@ -60,13 +61,15 @@
     <div class="container">
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <div class="separator"></div>
-            <h1 class="ftco-heading heading-thin">Geographic Visualization</h1>
-            <div class="'row" style="margin-top: 20px;">
-                <div class="col-md-2 content">
-                    <p >In this section, we will show the range of birds at different times of the year. You can select different filters in the drop-down boxes to get the desired results. The same holds true for the different time and space options, you can get information about different areas directly on the map. You can also get an animation of the distribution of birds over a certain time frame.</p>
+            <h1 class="ftco-heading heading-thin" id="title1">Geographic Visualization</h1>
+            <div class="'row" style="margin-top: 30px; align-content: center">
+                <div class="col-md-2 content" id="content1">
+                    <p >In this section, we will show the range of birds at different times of the year.<br><br>
+                        You can select different filters in the drop-down boxes to get the desired results. The same holds true for the different time and space options, you can get information about different areas directly on the map.<br><br>
+                        You can also get an animation of the distribution of birds over a certain time frame.</p>
                 </div>
-                <div id="map_plot" class="col-md-10 thumbnail plot" style="width: 950px; height: 550px">
-                    <p style="margin-left: 5px;"> Bird: <select id="map_birds"></select> Data: <select id="map_data_type"></select> Season: <select id="map_seasons"></select> Month: <select id="map_month"></select> <button id="play">Play</button></p>
+                <div id="map_plot" class="col-md-8 thumbnail plot" style="width: 71%; height: 550px;">
+                    <p>Bird:<select id="map_birds"></select> Data:<select id="map_data_type"></select> Season:<select id="map_seasons"></select> Month:<select id="map_month"></select><button id="play">Play</button></p>
                     <div id="map" class="svg-container"></div>
                 </div>
             </div>
@@ -78,16 +81,16 @@
     <div class="container">
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <div class="separator"></div>
-            <h1 class="ftco-heading heading-thin">Statistic Features</h1>
-            <div class="'row" style="margin-top: 20px;">
-                <div id="bar_plot" class="col-md-10 thumbnail plot" style="width: 950px; height: 550px">
-                    <p style="margin-left: 3px;"> Bird:<select id="bar_birds"></select> Data:<select id="bar_data_type"></select> Season:<select id="bar_seasons"></select> Order:<select id="bar_sort"></select></p>
+            <h1 class="ftco-heading heading-thin" id="title2">Statistic Features</h1>
+            <div class="'row" style="margin-top: 30px;">
+                <div id="bar_plot" class="col-md-8 thumbnail plot" style="width: 71%; height: 550px;">
+                    <p>Bird:<select id="bar_birds"></select>Data:<select id="bar_data_type"></select>Season:<select id="bar_seasons"></select>Order:<select id="bar_sort"></select></p>
                     <div id="bar" class="svg-container"></div>
                 </div>
-                <div class="col-md-2 content">
-                    <p>In this part, we show explicit statistic features of different birds around worldwide. The chart plot shows basic statistics about the
-                        abundance and population of a bird within different regions, while the pie chart gives a more intuitive view on the rank of bird distributions.
-                        Both plots provide exhausted conclusions about bird distributions.  </p></div>
+                <div class="col-md-2 content" id="content2" >
+                    <p>In this part, we show explicit statistic features of different birds around worldwide.<br><br>
+                        The chart plot shows basic statistics about the abundance and population of a bird within different regions.<br><br>
+                        It provides exhausted conclusions about bird distributions.  </p></div>
             </div>
         </div>
     </div>
@@ -98,12 +101,13 @@
     <div class="container">
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <div class="separator"></div>
-            <h1 class="ftco-heading heading-thin">Region Distribution</h1>
-            <div class="'row" style="margin-top: 20px;">
-                <div class="col-md-4 content">
-                    <p>In this part, we will display the possible bird species present in a location, which is chosen through drop-down menus: you can first select a continent, then the country and the region you want to visualize.</p>
+            <h1 class="ftco-heading heading-thin" id="title3">Region Distribution</h1>
+            <div class="'row" style="margin-top: 30px;">
+                <div class="col-md-4 content" id="content3">
+                    <p>In this part, we will display the possible bird species present in a location, which is chosen through drop-down menus.<br><br>
+                        You can first select a continent, then the country and the region you want to visualize.</p>
                 </div>
-                <div id="pie_plot" class="col-md-8 thumbnail plot" style="width: 750px;height: 750px; ">
+                <div id="pie_plot" class="col-md-8 thumbnail plot" style="width: 60%;height: 60%; margin-left: 50px">
                     <p style="margin-left: 3px;"> Continent:<select id="pie_continent"></select> Country:<select id="pie_country"></select> City:<select id="pie_region"></select></p>
                     <div id="pie" class="svg-container"></div>
                 </div>
@@ -116,9 +120,10 @@
     <div class="container">
         <div class="" data-aos="fade-up" data-aos-delay="100">
             <div class="separator"></div>
-            <h1 class="ftco-heading heading-thin">Birds Comparison</h1>
-            <p class="content">In this section, you can select more species of birds in order to compare their distribution areas and density. Each column corresponds to a feature, and you can observe the differences of values by plotting on the axis.</p>
-            <div id="parallel_plot" class="thumbnail plot" style="width: 1150px; height: 700px">
+            <h1 class="ftco-heading heading-thin" id="title4">Birds Comparison</h1>
+            <p class="content" id="content4">In this section, you can select more species of birds in order to compare their distribution areas and density.
+                Each column corresponds to a feature, and you can observe the differences of values by plotting on the axis.</p>
+            <div id="parallel_plot" class="thumbnail plot" style="width: 100%; height: 70%;" >
                 <p>All Birds:<select id="all_birds" ></select>  Selected Birds： <select id="selected_birds" ></select>  <button id="reset_selection">reset</button></p>
                 <div id="parallel" class="svg-container"></div>
             </div>
@@ -128,11 +133,11 @@
 
 <footer class="section">
     <div>
-        <div class=" text-center">
-            <h2 >_rmrf team</h2>
-            <p style="font-size: 17px; font-weight: 550">Hanyuan Hu</p>
-            <p style="font-size: 17px; font-weight: 550">Qiming Sun</p>
-            <p style="font-size: 17px; font-weight: 550">Zewei Xu</p>
+        <div class="text-center" id="teampage">
+            <h2 style="font-size: 36px; font-weight: bold; color: #6b1900">Team _rmrf</h2>
+            <p class="name">Hanyuan Hu</p>
+            <p class="name">Qiming Sun</p>
+            <p class="name">Zewei Xu</p>
         </div>
     </div>
 </footer>

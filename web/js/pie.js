@@ -1,12 +1,12 @@
 function  piePlot(
     svg_element_id='pie',
-    width=750,
-    height=750,
+    width=800,
+    height=800,
     continent=undefined,
     country=undefined,
     region=undefined,
-    margin = {top: 10, right: 20, bottom: 30, left: 20},
-    innerRadius = 200
+    margin = {top: 10, right: 20, bottom: 30, left: 30},
+    innerRadius = 220
 ) {
 
     width = width - margin.left - margin.right;

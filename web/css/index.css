@@ -1,3 +1,17 @@
+@font-face {
+    font-family: SentyTEA;
+    src: url("../fonts/SentyTEA.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Gabriola;
+    src: url("../fonts/Gabriola.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 #home {
     background-position: center center;
     min-height: 700px;}
@@ -186,7 +200,6 @@ pre {
 }
 
 .content {
-    margin-top: 20px;
     font-size: 17px;
 }
 
@@ -197,4 +210,102 @@ pre {
 body {
     background: linear-gradient(0deg, rgba(251, 200, 145, 0.53) 0%, rgba(242, 195, 127, 0.59) 20%, rgba(213, 177, 55, 0.59) 45%, rgba(193, 197, 71, 0.6) 100%);
     background-size: 100% 100%;
+}
+
+.container {
+    min-width: 70%;
+}
+
+#hometitle {
+    color:floralwhite;
+    opacity: 1;
+    font-size: 56px;
+    font-family: SentyTEA;
+    font-weight: bold;
+}
+
+#homeintro {
+    color:floralwhite;
+    opacity: 1;
+    font-size: 25px;
+    font-family: Gabriola;
+}
+
+#title1 {
+    color: olive;
+    opacity: 1;
+    font-size: 52px;
+    font-family: SentyTEA;
+    font-weight: bold;
+}
+
+#content1 {
+    color: #606000;
+    opacity: 1;
+    font-size: 23px;
+    font-family: Gabriola;
+    margin-top: 5%;
+    width: 28%;
+}
+
+#title2{
+    color: #a97e17;
+    opacity: 1;
+    font-size: 52px;
+    font-family: SentyTEA;
+    font-weight: bold;
+}
+
+#content2 {
+    color: #7a5b00;
+    opacity: 1;
+    font-size: 23px;
+    font-family: Gabriola;
+    margin-top: 6%;
+    margin-left: 10px;
+    width: 28%;
+}
+
+#title3{
+    color: #c48023;
+    opacity: 1;
+    font-size: 52px;
+    font-family: SentyTEA;
+    font-weight: bold;
+}
+
+#content3 {
+    color: #985f01;
+    opacity: 1;
+    font-size: 23px;
+    font-family: Gabriola;
+    margin-top: 6%;
+    width: 30%;
+}
+
+#title4{
+    color: #914230;
+    opacity: 1;
+    font-size: 52px;
+    font-family: SentyTEA;
+    font-weight: bold;
+}
+
+#content4 {
+    color: #812a01;
+    opacity: 1;
+    font-size: 23px;
+    font-family: Gabriola;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#teampage {
+    font-family: SentyTEA;
+    margin-top: 20px;
+}
+
+.name {
+    font-size: 24px;
+    color: #601414;
 }

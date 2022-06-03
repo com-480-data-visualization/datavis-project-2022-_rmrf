@@ -1,6 +1,6 @@
 function parallelPlot(
     svg_element_id='parallel',
-    width = 1150 ,
+    width = 1250 ,
     height = 650 ,
     margin = {top: 50, right: 110, bottom: 20, left: 120},
     name=[],
@@ -78,7 +78,6 @@ function parallelPlot(
     var yAxis = d3.axisLeft();
 
     var container = d3.select("#"+svg_element_id).append('div')
-        .attr("class", "parcoords")
         .style("width", width + margin.left + margin.right + "px")
         .style("height", height + margin.top + margin.bottom + "px");
 
@@ -89,25 +88,24 @@ function parallelPlot(
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var canvas = container.append("canvas")
-        .attr("width", width * devicePixelRatio)
-        .attr("height", height * devicePixelRatio)
+        .attr("width", width)
+        .attr("height", height)
         .style("width", width + "px")
         .style("height", height + "px")
         .style("margin-top", (margin.top) + "px")
         .style("margin-left", (margin.left) + "px");
 
     var ctx = canvas.node().getContext("2d");
-    ctx.globalCompositeOperation = 'darken';
-    ctx.globalAlpha = 0.15;
-    ctx.lineWidth = 1.5;
-    ctx.scale(devicePixelRatio, devicePixelRatio);
+    ctx.globalCompositeOperation = 'lighten';
+    ctx.lineWidth = 1;
 
 
 
     var axes = svg.selectAll(".axis")
         .data(dimensions)
         .enter().append("g")
-        .attr("class", function(d) { return "axis " + d.key.replace(/ /g, "_"); })
+        .attr("class", function(d) {
+            return "axis " + d.key; })
         .attr("transform", function(d,i) { return "translate(" + xscale(i) + ")"; });
 
     d3.csv("https://com-480-data-visualization.github.io/datavis-project-2022-_rmrf/data/data_map", function(error, df) {
@@ -118,38 +116,36 @@ function parallelPlot(
             let data=df.filter(d=> selected_birds.includes(d.common_name));
             data.forEach(function(d) {
                 dimensions.forEach(function(p) {
-                    d[p.key] = !d[p.key] ? null : p.type.coerce(d[p.key]);
+                    d[p.key] = p.type.coerce(d[p.key]);
                 });
             });
 
 
             dimensions.forEach(function(dim) {
-                dim.domain = d3_functor(dim.type.extent)(data.map(function(d) { return d[dim.key]; }));
+                dim.domain = dim.type.extent(data.map(function(d) { return d[dim.key]; }));
                 if (!("scale" in dim)) {
                     dim.scale = dim.type.defaultScale.copy();
                 }
                 dim.scale.domain(dim.domain);
             });
 
-            var render = renderQueue(draw).rate(30);
+            var render = renderQueue(draw).rate(50);
 
             ctx.clearRect(0,0,width,height);
-            ctx.globalAlpha = d3.min([1.15/Math.pow(data.length,0.3),1]);
+            ctx.globalAlpha = 0.3;
             render(data);
 
             axes.selectAll('g').remove()
 
             axes.append("g")
                 .each(function(d) {
-                    var renderAxis = "axis" in d
-                        ? d.axis.scale(d.scale)  // custom axis
-                        : yAxis.scale(d.scale);  // default axis
+                    var renderAxis = yAxis.scale(d.scale);
                     d3.select(this).call(renderAxis);
                 })
                 .append("text")
                 .attr("class", "title")
                 .attr("text-anchor", "start")
-                .text(function(d) { return "description" in d ? d.description : d.key; });
+                .text(function(d) { return d.description; });
 
             axes.append("g")
                 .attr("class", "brush")
@@ -166,31 +162,14 @@ function parallelPlot(
                 .attr("width", 16);
 
 
-
-            function d3_functor(v) {
-                return typeof v === "function" ? v : function() { return v; };
-            };
-
-            function project(d) {
-                return dimensions.map(function(p,i) {
-
-                    if (
-                        !(p.key in d) ||
-                        d[p.key] === null
-                    ) return null;
-
+            function draw(d) {
+                ctx.strokeStyle = "#b2f3eb";
+                ctx.beginPath();
+                var coords = dimensions.map(function(p,i) {
                     return [xscale(i),p.scale(d[p.key])];
                 });
-            };
-
-            function draw(d) {
-                ctx.strokeStyle = "#b5e1dc";
-                ctx.beginPath();
-                var coords = project(d);
                 coords.forEach(function(p,i) {
-
                     if (p === null) {
-
                         if (i > 0) {
                             var prev = coords[i-1];
                             if (prev !== null) {
@@ -206,12 +185,10 @@ function parallelPlot(
                         }
                         return;
                     }
-
                     if (i == 0) {
                         ctx.moveTo(p[0],p[1]);
                         return;
                     }
-
                     ctx.lineTo(p[0],p[1]);
                 });
                 ctx.stroke();
@@ -224,7 +201,6 @@ function parallelPlot(
 
             function brush() {
                 render.invalidate();
-
                 var actives = [];
                 svg.selectAll(".axis .brush")
                     .filter(function(d) {
@@ -240,7 +216,6 @@ function parallelPlot(
                 var selected = data.filter(function(d) {
                     if (actives.every(function(active) {
                         var dim = active.dimension;
-                        // test if point is within extents for each active brush
                         return dim.type.within(d[dim.key], active.extent, dim);
                     })) {
                         return true;
@@ -248,13 +223,11 @@ function parallelPlot(
                 });
 
                 ctx.clearRect(0,0,width,height);
-                ctx.globalAlpha = d3.min([0.85/Math.pow(selected.length,0.3),1]);
+                ctx.globalAlpha = 0.3;
                 render(selected);
-
             }
 
         }
-
 
         function update_selected_birds(){
             d3.select('#selected_birds').selectAll('option').remove();
@@ -268,7 +241,7 @@ function parallelPlot(
             update();
         }
 
-        var a=Array.from(new Set(df.map(d=>d.common_name)));
+        let a=Array.from(new Set(df.map(d=>d.common_name)));
 
         d3.select('#all_birds').selectAll('option')
             .data(a.sort((a,b)=>a.localeCompare(b)))

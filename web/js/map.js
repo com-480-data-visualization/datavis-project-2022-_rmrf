@@ -1,11 +1,11 @@
 function  mapPlot(
     svg_element_id='map',
-    width=950,
+    width=920,
     height=500,
     species_code='bbwduc',
     season_name='breeding',
     data_type='abundance_mean',
-    currentMonth=0,
+    currentMonth=1,
     playing=false,
 ) {
     var svg=d3.select('#'+svg_element_id)
@@ -72,6 +72,8 @@ function  mapPlot(
                     }
                 }
             });
+
+
 
             tip.html(function(d) {
                 return (d.properties.name+"<br/>"+d.total)
@@ -231,6 +233,8 @@ function  mapPlot(
                     playing = false;
                 });
 
+            season_name=seasons_map.get(species_code+"_"+currentMonth)|| 'year_round';
+            update();
         })
 
 }
