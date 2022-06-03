@@ -6,7 +6,7 @@ function  piePlot(
     country=undefined,
     region=undefined,
     margin = {top: 10, right: 20, bottom: 30, left: 30},
-    innerRadius = 220
+    innerRadius = 200
 ) {
 
     width = width - margin.left - margin.right;

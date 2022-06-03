@@ -150,6 +150,14 @@
     });
     const note = document.querySelector('#home');
     note.style["min-height"] = $(window).height();
+    console.log($(window).height())
+    console.log(window.screen.height)
+    const width  = window.innerWidth || document.documentElement.clientWidth ||
+        document.body.clientWidth;
+    const height = window.innerHeight|| document.documentElement.clientHeight||
+        document.body.clientHeight;
+
+    console.log(width, height);
 </script>
 <script>
     (function($) {
