@@ -98,4 +98,4 @@ The report of milestone 2 is [here](https://github.com/com-480-data-visualizatio
 ## Milestone 3
 The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/blob/main/Process%20book.pdf)
 
-The screencast is [here](https://youtu.be/xrt3H-RYrVY)
+The screencast is [here](https://youtu.be/os_b8vm7ok8)
