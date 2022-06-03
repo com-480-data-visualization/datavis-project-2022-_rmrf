@@ -317,16 +317,16 @@ body {
 
 #map_plot p {
     margin-top: 2px;
-    margin-left: 5px;
-    font-size: 15px;
+    margin-left: 3px;
+    font-size: 13px;
     font-family: Gabriola;
     font-weight: bold;
 }
 
 #map_plot p select {
-    font-size: 13px;
+    font-size: 11px;
     font-family: SentyTEA;
-    margin-right: 5px;
+    margin-right: 3px;
     font-weight: normal;
 }
 
@@ -336,16 +336,16 @@ body {
 
 #bar_plot p {
     margin-top: 2px;
-    margin-left: 5px;
-    font-size: 15px;
+    margin-left: 3px;
+    font-size: 13px;
     font-family: Gabriola;
     font-weight: bold;
 }
 
 #bar_plot p select {
-    font-size: 13px;
+    font-size: 11px;
     font-family: SentyTEA;
-    margin-right: 5px;
+    margin-right: 3px;
     font-weight: normal;
 }
 
@@ -355,16 +355,16 @@ body {
 
 #pie_plot p {
     margin-top: 4px;
-    margin-left: 5px;
-    font-size: 15px;
+    margin-left: 3px;
+    font-size: 13px;
     font-family: Gabriola;
     font-weight: bold;
 }
 
 #pie_plot p select {
-    font-size: 13px;
+    font-size: 11px;
     font-family: SentyTEA;
-    margin-right: 5px;
+    margin-right: 3px;
     font-weight: normal;
 }
 
@@ -374,15 +374,15 @@ body {
 
 #parallel_plot p {
     margin-top: 4px;
-    margin-left: 5px;
-    font-size: 15px;
+    margin-left: 3px;
+    font-size: 13px;
     font-family: Gabriola;
     font-weight: bold;
 }
 
 #parallel_plot p select {
-    font-size: 13px;
+    font-size: 11px;
     font-family: SentyTEA;
-    margin-right: 5px;
+    margin-right: 3px;
     font-weight: normal;
 }
