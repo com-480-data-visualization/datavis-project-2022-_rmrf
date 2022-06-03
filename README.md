@@ -3,9 +3,9 @@
 
 | Member   |    SCIPER     |
 |----------|:-------------:|
-| Zewei Xu |  left-aligned |
-| Hanyuan Hu |    centered   |
-| Qiming Sun | right-aligned |
+| Zewei Xu |  328875 |
+| Hanyuan Hu |       |
+| Qiming Sun | 340675 |
 
 
 ## Link to our website
@@ -98,4 +98,4 @@ The report of milestone 2 is [here](https://github.com/com-480-data-visualizatio
 ## Milestone 3
 The process book can be access [here](https://github.com/com-480-data-visualization/datavis-project-2022-_rmrf/edit/main/README.md)
 
-The screencast is [here](https://www.youtube.com/)
+The screencast is [here](https://youtu.be/xrt3H-RYrVY)
