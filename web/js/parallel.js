@@ -1,6 +1,6 @@
 function parallelPlot(
     svg_element_id='parallel',
-    width = 1250 ,
+    width = 1150 ,
     height = 650 ,
     margin = {top: 50, right: 110, bottom: 20, left: 120},
     name=[],
@@ -278,15 +278,3 @@ function parallelPlot(
 }
 
 
-
-function whenDocumentLoaded(action) {
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", action);
-    } else {
-        action();
-    }
-}
-
-whenDocumentLoaded(() => {
-    plot_object = parallelPlot('parallel');
-});

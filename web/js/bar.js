@@ -1,6 +1,6 @@
 function  barPlot(
     svg_element_id='bar',
-    width=900,
+    width=800,
     height=550,
     species_code=undefined,
     season_name='breeding',
@@ -210,14 +210,3 @@ function  barPlot(
 }
 
 
-function whenDocumentLoaded(action) {
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", action);
-    } else {
-        action();
-    }
-}
-
-whenDocumentLoaded(() => {
-    plot_object = barPlot('bar');
-});

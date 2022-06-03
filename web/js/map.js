@@ -1,6 +1,6 @@
 function  mapPlot(
     svg_element_id='map',
-    width=920,
+    width=800,
     height=500,
     species_code='bbwduc',
     season_name='breeding',
@@ -287,15 +287,3 @@ function makeColorbar(svg, color_scale,title, colorbar_size, scaleClass=d3.scale
         .style('stroke-width', '1px')
 }
 
-
-function whenDocumentLoaded(action) {
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", action);
-    } else {
-        action();
-    }
-}
-
-whenDocumentLoaded(() => {
-    plot_object = mapPlot('map');
-});
